@@ -14,8 +14,7 @@
 + 크로스 브라우징
 
 ### 웹표준
-Link: [Google][googlelink]
-[googlelink]: https://google.com "Go google" 
+[W3C][http://w3.org] 
 #### 구조언어(HTML)
 ```
 <!DOCTYPE html>
