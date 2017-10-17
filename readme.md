@@ -34,3 +34,20 @@
 </html>
 ```
 
+
+## 2일차
+### WAI-ARIA
+
+####WAI-ARIA의 목적
+>WAI-ARIA는 스크린리더 및 보조기기 등에서 접근성 및 상호 운용성을 향상시키기 위해 마크업에 역할(Role), 속성(Property), 상태(State) 정보를 추가할 수 있도록 지원하는 것
+>ARIA 속성들은 정보통신 보조기기를 사용하는 사용자를 위한 것 (접근성 API)
+
+#### ARIA Role과 HTML5 섹션 관련 요소 비교
++ role=“application”(div)
++ role=“banner”(header)
++ role=“navigation”(nav)
++ role=“main”(main, article, aside)
++ role=“complementary”(aside)
++ role=“form”(form)
++ role=“search”(div, form)
++ role=“contentinfo”(footer)
