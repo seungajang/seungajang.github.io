@@ -1,9 +1,287 @@
-@charset "UTF-8";
-
-/* 로고영역의 배경이미지 설정 */
-
-.logo {
-  width: 155px;
-  height: 29px;
-  background: url('../images/common/logo.gif') no-repeat 0 0;
-}
+    @charset 'UTF-8';
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+    /* 여백 제거 */
+    
+    html,
+    body,
+    div,
+    span,
+    figure,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    p,
+    address,
+    form,
+    fieldset,
+    input,
+    textarea,
+    select,
+    table,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+    }
+    /* 목록의 불릿 제거 */
+    
+    ul {
+      list-style: none;
+    }
+    /* 링크 스타일 */
+    
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    a:hover,
+    a:focus {
+      color: #666;
+    }
+    /* 박스 크기 계산 방식 */
+    
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+    
+    .a11y a {
+      background: rgba(0, 0, 0, 0.3);
+      color: hsla(0, 100%, 100%, 1);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      transform: translateX(-100%);
+    }
+    
+    .a11y a:focus {
+      transform: translateX(0);
+    }
+    /* 본문 스타일 */
+    
+    html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+      font-weight: 400;
+      color: #000;
+      font-size: 1.4em;
+    }
+    /* Wrapper */
+    
+    .wrapper {
+      background: silver;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* 공통 스타일 */
+    
+    .header,
+    .visual,
+    .main-content,
+    .slogan,
+    .footer-inner {
+      width: 886px;
+    }
+    
+    .header {
+      background: yellow url('../images/common/bg_menubox.png') no-repeat;
+      height: 105px;
+      position: relative;
+      padding: 0 22px;
+    }
+    /* 로고영역의 배경이미지 설정 */
+    
+    .logo {
+      position: absolute;
+      left: 60px;
+      top: 40px;
+      width: 155px;
+      height: 29px;
+      background: url('../images/common/logo.gif');
+    }
+    /* 웹카페 안내 링크 */
+    
+    .lnb {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem 0;
+    }
+    
+    .lnb a {
+      padding: 0.5rem;
+      margin-left: 1px;
+    }
+    
+    .lnb li::before {
+      content: ":";
+    }
+    
+    .lnb li:first-child::before {
+      content: '';
+    }
+    
+    .gnb {
+      background: url('../images/common/sitemenu_bg.gif') no-repeat;
+    }
+    
+    .main-menu {
+      display: flex;
+      padding-left: 217px;
+      position: relative;
+    }
+    
+    .sub-menu {
+      position: absolute;
+      white-space: nowrap;
+      top: 43px;
+      display: none;
+    }
+    
+    .sub-menu-act {
+      display: block!important;
+    }
+    
+    .sub-menu li {
+      display: inline-block;
+    }
+    
+    .sub-menu li::before {
+      content: '.';
+      position: relative;
+      top: -0.5rem;
+    }
+    
+    .sub-menu a {
+      display: inline-block;
+      padding: 0.5rem;
+    }
+    
+    .sub-menu1 {
+      left: 217px;
+    }
+    
+    .sub-menu2 {
+      left: 340px;
+    }
+    
+    .sub-menu3 {
+      left: 450px;
+    }
+    
+    .sub-menu4 {
+      left: 540px;
+    }
+    
+    .sub-menu5 {
+      left: 550px;
+    }
+    
+    .sub-menu6 {
+      left: 525px;
+    }
+    
+    .slogan {
+      background: orange;
+    }
+    
+    .visual {
+      background: lime;
+    }
+    
+    .main-content {
+      background: red;
+      display: grid;
+      grid-template-columns: 20px 239px 25px 375px 24px 185px 18px;
+      grid-template-rows: 33% 33% 33%;
+      grid-row-gap: 20px;
+    }
+    
+    .main-content>div {
+      background: pink;
+    }
+    
+    .login {
+      width: 239px;
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+    
+    .validation {
+      width: 239px;
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    
+    .term {
+      width: 239px;
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+    
+    .search-form {
+      width: 375px;
+      grid-column-start: 4;
+      grid-row-start: 1;
+    }
+    
+    .board {
+      width: 375px;
+      grid-column-start: 4;
+      grid-row-start: 2;
+    }
+    
+    .news {
+      width: 375px;
+      grid-column-start: 4;
+      grid-row-start: 3;
+    }
+    
+    .event {
+      width: 185px;
+      grid-column-start: 6;
+      grid-row-start: 1;
+    }
+    
+    .related {
+      width: 185px;
+      grid-column-start: 6;
+      grid-row-start: 2;
+    }
+    
+    .favorite {
+      width: 185px;
+      grid-column-start: 6;
+      grid-row-start: 3;
+    }
+    
+    .footer {
+      background: skyblue;
+    }
+    
+    .footer-inner {}
+    /* 로고영역의 배경이미지 설정 */
+    
+    .logo {
+      width: 155px;
+      height: 29px;
+      background: url('../images/common/logo.gif') no-repeat 0 0;
+    }

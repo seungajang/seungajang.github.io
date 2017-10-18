@@ -51,3 +51,15 @@
 + role=“form”(form)
 + role=“search”(div, form)
 + role=“contentinfo”(footer)
+
+## 3일차
+### flex 속성
+
+```
+    .wrapper {
+      background: silver;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+```
