@@ -1,287 +1,521 @@
-    @charset 'UTF-8';
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
-    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-    /* 여백 제거 */
-    
-    html,
-    body,
-    div,
-    span,
-    figure,
-    dl,
-    dt,
-    dd,
-    ul,
-    ol,
-    li,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    blockquote,
-    p,
-    address,
-    form,
-    fieldset,
-    input,
-    textarea,
-    select,
-    table,
-    th,
-    td {
-      margin: 0;
-      padding: 0;
-    }
-    /* 목록의 불릿 제거 */
-    
-    ul {
-      list-style: none;
-    }
-    /* 링크 스타일 */
-    
-    a:link,
-    a:visited {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    a:hover,
-    a:focus {
-      color: #666;
-    }
-    /* 박스 크기 계산 방식 */
-    
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
-    
-    .a11y a {
-      background: rgba(0, 0, 0, 0.3);
-      color: hsla(0, 100%, 100%, 1);
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
-      transform: translateX(-100%);
-    }
-    
-    .a11y a:focus {
-      transform: translateX(0);
-    }
-    /* 본문 스타일 */
-    
-    html {
-      font-size: 10px;
-    }
-    
-    body {
-      font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
-      font-weight: 400;
-      color: #000;
-      font-size: 1.4em;
-    }
-    /* Wrapper */
-    
-    .wrapper {
-      background: silver;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    /* 공통 스타일 */
-    
-    .header,
-    .visual,
-    .main-content,
-    .slogan,
-    .footer-inner {
-      width: 886px;
-    }
-    
-    .header {
-      background: yellow url('../images/common/bg_menubox.png') no-repeat;
-      height: 105px;
-      position: relative;
-      padding: 0 22px;
-    }
-    /* 로고영역의 배경이미지 설정 */
-    
-    .logo {
-      position: absolute;
-      left: 60px;
-      top: 40px;
-      width: 155px;
-      height: 29px;
-      background: url('../images/common/logo.gif');
-    }
-    /* 웹카페 안내 링크 */
-    
-    .lnb {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem 0;
-    }
-    
-    .lnb a {
-      padding: 0.5rem;
-      margin-left: 1px;
-    }
-    
-    .lnb li::before {
-      content: ":";
-    }
-    
-    .lnb li:first-child::before {
-      content: '';
-    }
-    
-    .gnb {
-      background: url('../images/common/sitemenu_bg.gif') no-repeat;
-    }
-    
-    .main-menu {
-      display: flex;
-      padding-left: 217px;
-      position: relative;
-    }
-    
-    .sub-menu {
-      position: absolute;
-      white-space: nowrap;
-      top: 43px;
-      display: none;
-    }
-    
-    .sub-menu-act {
-      display: block!important;
-    }
-    
-    .sub-menu li {
-      display: inline-block;
-    }
-    
-    .sub-menu li::before {
-      content: '.';
-      position: relative;
-      top: -0.5rem;
-    }
-    
-    .sub-menu a {
-      display: inline-block;
-      padding: 0.5rem;
-    }
-    
-    .sub-menu1 {
-      left: 217px;
-    }
-    
-    .sub-menu2 {
-      left: 340px;
-    }
-    
-    .sub-menu3 {
-      left: 450px;
-    }
-    
-    .sub-menu4 {
-      left: 540px;
-    }
-    
-    .sub-menu5 {
-      left: 550px;
-    }
-    
-    .sub-menu6 {
-      left: 525px;
-    }
-    
-    .slogan {
-      background: orange;
-    }
-    
-    .visual {
-      background: lime;
-    }
-    
-    .main-content {
-      background: red;
-      display: grid;
-      grid-template-columns: 20px 239px 25px 375px 24px 185px 18px;
-      grid-template-rows: 33% 33% 33%;
-      grid-row-gap: 20px;
-    }
-    
-    .main-content>div {
-      background: pink;
-    }
-    
-    .login {
-      width: 239px;
-      grid-column-start: 2;
-      grid-row-start: 1;
-    }
-    
-    .validation {
-      width: 239px;
-      grid-column-start: 2;
-      grid-row-start: 2;
-    }
-    
-    .term {
-      width: 239px;
-      grid-column-start: 2;
-      grid-row-start: 3;
-    }
-    
-    .search-form {
-      width: 375px;
-      grid-column-start: 4;
-      grid-row-start: 1;
-    }
-    
-    .board {
-      width: 375px;
-      grid-column-start: 4;
-      grid-row-start: 2;
-    }
-    
-    .news {
-      width: 375px;
-      grid-column-start: 4;
-      grid-row-start: 3;
-    }
-    
-    .event {
-      width: 185px;
-      grid-column-start: 6;
-      grid-row-start: 1;
-    }
-    
-    .related {
-      width: 185px;
-      grid-column-start: 6;
-      grid-row-start: 2;
-    }
-    
-    .favorite {
-      width: 185px;
-      grid-column-start: 6;
-      grid-row-start: 3;
-    }
-    
-    .footer {
-      background: skyblue;
-    }
-    
-    .footer-inner {}
-    /* 로고영역의 배경이미지 설정 */
-    
-    .logo {
-      width: 155px;
-      height: 29px;
-      background: url('../images/common/logo.gif') no-repeat 0 0;
-    }
+@charset 'UTF-8';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+/* 여백 제거 */
+
+html,
+body,
+div,
+span,
+figure,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+address,
+form,
+fieldset,
+input,
+textarea,
+select,
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 목록의 불릿 제거 */
+
+ul {
+  list-style: none;
+}
+
+
+/* 링크 스타일 */
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: #666;
+}
+
+
+/* 숨김 콘텐츠 */
+
+.readable-hidden {
+  position: absolute;
+  background: yellow;
+  left: -9999em;
+}
+
+
+/* 박스 크기 계산 방식 */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.a11y a {
+  background: rgba(0, 0, 0, 0.3);
+  color: hsla(0, 100%, 100%, 1);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  transform: translateX(-100%);
+}
+
+.a11y a:focus {
+  transform: translateX(0);
+  z-index: 10;
+}
+
+
+/* 본문 스타일 */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+  font-weight: 400;
+  color: #000;
+  font-size: 1.4em;
+  background: url('../images/common/wrap_bg.jpg') no-repeat 50% 0, url('../images/common/bg_body.gif') repeat-x;
+}
+
+
+/* Wrapper */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 공통 스타일 */
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer-inner {
+  width: 886px;
+}
+
+.header {
+  background: url('../images/common/bg_menubox.png') no-repeat;
+  height: 105px;
+  position: relative;
+  padding: 0 22px;
+}
+
+
+/* 로고영역의 배경이미지 설정 */
+
+.logo {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  width: 155px;
+  height: 29px;
+  background: url('../images/common/logo.gif');
+}
+
+
+/* 웹카페 안내 링크 */
+
+.lnb {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.lnb a {
+  padding: 0.5rem;
+  margin-left: 1px;
+}
+
+.lnb li::before {
+  content: ":";
+}
+
+.lnb li:first-child::before {
+  content: '';
+}
+
+.gnb {
+  background: url('../images/common/sitemenu_bg.gif') no-repeat;
+}
+
+.main-menu {
+  display: flex;
+  padding-left: 217px;
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  white-space: nowrap;
+  top: 43px;
+  display: none;
+}
+
+.sub-menu-act {
+  display: block!important;
+}
+
+.sub-menu li {
+  display: inline-block;
+}
+
+.sub-menu li::before {
+  content: '.';
+  position: relative;
+  top: -0.5rem;
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.sub-menu1 {
+  left: 217px;
+}
+
+.sub-menu2 {
+  left: 340px;
+}
+
+.sub-menu3 {
+  left: 450px;
+}
+
+.sub-menu4 {
+  left: 540px;
+}
+
+.sub-menu5 {
+  left: 550px;
+}
+
+.sub-menu6 {
+  left: 525px;
+}
+
+
+/* 메인콘텐츠 */
+
+.main-content {
+  background: url('../images/common/contents_box.png')no-repeat;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 20px 239px 25px 375px 24px 185px 18px;
+  grid-template-rows: 33% 33% 33%;
+  grid-row-gap: 20px;
+}
+
+
+/* 로그인 */
+
+.login {
+  width: 239px;
+  padding: 10px;
+  background: url('../images/main/login_box.gif')no-repeat;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.login-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 10px;
+  color: hsla(60, 95%, 60%, 1)
+}
+
+.login-form {
+  margin: 15px 5px 10px;
+  border-bottom: 1px solid #aaa;
+  height: 55px;
+  display: flex;
+  flex-flow: column wrap;
+  /* justify-content: flex-start; 세로축 정렬 */
+  align-content: space-between;
+}
+
+.login-form span {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 20px;
+  border: 1px solid #aaa;
+}
+
+.user-id,
+.user-pw {
+  width: 155px;
+  margin-bottom: 7px;
+}
+
+.btn-login {
+  width: 50px;
+  height: 45px;
+  padding-top: 45px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url('../images/main/btn_login.gif') no-repeat;
+}
+
+.member {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+}
+
+.member li::before {
+  content: '>';
+  color: #f00;
+  margin-right: 5px;
+}
+
+
+/* 유효성 검사 링크 */
+
+.validation {
+  width: 239px;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.validation a {
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  display: block;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
+/* 웹 관련 용어 */
+
+.term {
+  background: url('../images/main/bg_standardbox.gif') no-repeat;
+  width: 239px;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  padding: 15px 10px;
+}
+
+.term-heading {
+  font-size: 1.5rem;
+}
+
+.term-list {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 61px 1fr;
+  grid-template-rows: 20px 1fr;
+  grid-column-gap: 10px;
+}
+
+.term-list-heading {
+  grid-column: 2/3;
+  color: #296897;
+}
+
+.term-list-thumbnail {
+  grid-column: 1/2;
+  grid-row: 1/ span 2;
+}
+
+.term-list-brief {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+
+/* 검색 */
+
+.search-form {
+  background: url('../images/main/bg_search.gif') no-repeat;
+  width: 375px;
+  grid-column-start: 4;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+
+.search-form span {
+  background: url('../images/common/icon_search.gif') no-repeat;
+  padding-left: 20px;
+}
+
+.search-form input {
+  width: 190px;
+  height: 20px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.btn-search {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 18px;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-search::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/common/btn_search.gif') no-repeat;
+  cursor: pointer;
+}
+
+
+/* 보드 */
+
+.board {
+  width: 375px;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+
+.board .board-list {
+  display: flex;
+}
+
+.unvisual {
+  display: none;
+}
+
+.board-list [role="tab"] {
+  cursor: pointer;
+}
+
+.board div ul {
+  display: block;
+  margin-top: 10px;
+}
+
+.board div li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board div li a {
+  background: skyblue;
+  display: inline-block;
+  width: calc(100% - 80px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board div a::before {
+  content: '.';
+  position: relative;
+  top: -5px;
+  margin-right: 5px;
+}
+
+.board a[class$="more"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+/* 새소식 */
+
+.news {
+  width: 375px;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+
+.event {
+  width: 185px;
+  grid-column-start: 6;
+  grid-row-start: 1;
+}
+
+.related {
+  width: 185px;
+  grid-column-start: 6;
+  grid-row-start: 2;
+}
+
+.favorite {
+  width: 185px;
+  grid-column-start: 6;
+  grid-row-start: 3;
+}
+
+
+/* 슬로건 */
+
+.slogan {
+  background: orange;
+}
+
+
+/* 푸터 */
+
+.footer {
+  background: url('../images/common/footerbg.gif') repeat-x;
+}
+
+.footer-inner {}
+
+
+/* 로고영역의 배경이미지 설정 */
+
+.logo {
+  width: 155px;
+  height: 29px;
+  background: url('../images/common/logo.gif') no-repeat 0 0;
+}

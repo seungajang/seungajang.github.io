@@ -17,8 +17,8 @@
 
       <!-- 기존의 마크업 방법 -->
       <!-- <h1 class="logo">
-        <img src="images/common/logo.gif" alt="Web Cafe">
-      </h1> -->
+      <img src="images/common/logo.gif" alt="Web Cafe">
+    </h1> -->
 
       <!-- ARIA Label의 기능 -->
       <h1 class="logo" aria-label="Web Cafe"></h1>
@@ -31,8 +31,8 @@
       </ul>
       <div class="gnb" role="navigation" aria-label="메인 메뉴">
         <ul class="main-menu">
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu01_ov.gif" alt="HTML에 대해" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu01.gif" alt="HTML에 대해" /> </span>
             <ul class="sub-menu sub-menu1">
               <li>
                 <a href="#">(X)HTML 소개</a>
@@ -45,8 +45,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu02.gif" alt="CSS에 대해" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu02.gif" alt="CSS에 대해" /> </span>
             <ul class="sub-menu sub-menu2">
               <li>
                 <a href="#">CSS 소개</a>
@@ -59,8 +59,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu03.gif" alt="웹표준" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu03.gif" alt="웹표준" /> </span>
             <ul class="sub-menu sub-menu3">
               <li>
                 <a href="#">웹표준이란?</a>
@@ -73,8 +73,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu04.gif" alt="웹접근성" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu04.gif" alt="웹접근성" /> </span>
             <ul class="sub-menu sub-menu4">
               <li>
                 <a href="#">웹접근성의 개요</a>
@@ -87,8 +87,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu05.gif" alt="묻고답하기" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu05.gif" alt="묻고답하기" /> </span>
             <ul class="sub-menu sub-menu5">
               <li>
                 <a href="#">HTML 및 CSS</a>
@@ -102,8 +102,8 @@
 
             </ul>
           </li>
-          <li>
-            <span tabindex="0"> <img src="images/common/topmenu06.gif" alt="자료실" /> </span>
+          <li tabindex="0">
+            <span> <img src="images/common/topmenu06.gif" alt="자료실" /> </span>
             <ul class="sub-menu sub-menu6">
               <li>
                 <a href="#">웹표준 자료실</a>
@@ -121,16 +121,18 @@
     </div>
 
 
-    <div class="visual">Web Standards &amp; Accessibility </div>
+    <div class="visual">
+      <img src="images/main/main_visual.gif" alt="Web Standards &amp; Accessibility">
+    </div>
     <div class="main-content" role="main">
       <div class="login">
         <h2 class="login-heading">로그인</h2>
         <div class="login-form" role="form">
-          <div>
+          <div class="user-id user-pw">
             <!-- aria-labbledby는 상위 span의 id를 따라가줌 -->
             <!-- aria 속성들은 정보통신 보조기기를 사용하는 사용자를 위한 것(접근성 api) -->
-            <span id="uid">아이디</span><input type="text" aria-labelledby="uid" id="user-id">
-            <span id="upw">비밀번호</span><input type="password" aria-labelledby="upw">
+            <span class="user-id" id="uid">아이디</span><input type="text" aria-labelledby="uid" id="user-id">
+            <span class="user-pw" id="upw">비밀번호</span><input type="password" aria-labelledby="upw">
           </div>
           <!-- 버튼태그를 사용하지 않아도 버튼으로 인식할 수 있게 하는게 role -->
           <div class="btn-login" tabindex="0" role="button">로그인</div>
@@ -146,20 +148,20 @@
         <ul>
           <li>
             <a href="https://validator.w3.org/" target="_blank" aria-describedby="validation-heading">
-          HTML
-        </a>
+        HTML
+      </a>
           </li>
           <li>
             <a href="#" title="새창열림" onclick="javascript:window.open('https://jigsaw.w3.org/css-validator/'); return flase;" aria-describedby="validation-heading">
-          CSS
-        </a>
+        CSS
+      </a>
           </li>
         </ul>
       </div>
       <div class="term">
-        <h2 class="term-heading">웹 관련 용어</h2>
+        <h2 class="term-heading" aria-label="웹 관련 용어">웹 관련 용어</h2>
         <div class="term-list" role="group">
-          <div role="heading" class="term-list-heading">웹 표준이란?</div>
+          <div class="term-list-heading" role="heading">웹 표준이란?</div>
           <p class="term-list-thumbnail">
             <img src="images/main/img_standards.gif" aria-label="웹표준 관련 스펙을 정의하는 W3C">
           </p>
@@ -171,86 +173,68 @@
       <div class="search-form" role="search" aria-label="검색 폼">
         <span id="search-label">자료검색</span>
         <input type="text" aria-labelledby="search-label">
-        <span tabindex="0" role="button">검색</span>
+        <div class="btn-search" tabindex="0" role="button">검색</div>
       </div>
       <div class="board">
         <ul class="board-list" role="taplist">
-          <li tabindex="0" role="tab" aria-controls="notice" aria-selected="true" id="notice-tab">공지사항</li>
-          <li tabindex="0" role="tab" aria-controls="pds" aria-selected="false" id="pds-tab">자료실</li>
+          <li tabindex="0" role="tab" aria-controls="notice" aria-selected="true" id="notice-tab">
+            <img class="img-act" src="images/main/tab_notice_on.gif" alt="공지사항">
+          </li>
+          <li tabindex="0" role="tab" aria-controls="pds" aria-selected="false" id="pds-tab">
+            <img src="images/main/tab_pds_off.gif" alt="자료실">
+          </li>
         </ul>
         <div class="notice" role="tabpanel">
           <ul class="notice-list" id="notice" role="tabpanel" aria-labelledby="notice-tab">
             <li>
+
               <a href="#">HTML의 모든것을 알려주마! 샘플 활용법</a>
-              <time datetime="2016-08-02T13:51:30">
-              2017.10.17
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="#">W3C 사이트 리뉴얼 소식 및 공지사항</a>
-              <time datetime="2016-08-02T13:51:30">
-              2017.10.17
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="#">KWCAG 2.0 소식</a>
-              <time datetime="2016-08-02T13:51:30">
-              2017.10.17
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-              <time datetime="2016-08-02T13:51:30">
-              2017.10.17
-             </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-              <time datetime="2016-08-02T13:51:30">
-               2017.10.17
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
           </ul>
           <a href="#" class="notice-more" aria-labelledby="notice-tab">
             <img src="images/main/icon_more.gif" alt="더보기">
           </a>
         </div>
-
-        <div class="pds" role="tabpanel">
-
+        <div class="pds unvisual" role="tabpanel">
           <ul class="pds-list" id="pds" role="tabpanel" aria-labelledby="pds-tab">
             <li>
               <a href="/">디자인 사이트 링크 모음</a>
-              <time datetime="2016-08-02T13:51:30">
-              2016.08.02
-              </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="/">접근성 관련 자료 링크</a>
-              <time datetime="2016-08-02T13:51:30">
-              2016.08.02
-              </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="/">예제 샘플 응용해보기</a>
-              <time datetime="2016-08-02T13:51:30">
-              2016.08.02
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="/">웹 접근성 향상을 위한 국가표준 기술 가이드 라인</a>
-              <time datetime="2016-08-02T13:51:30">
-              2016.08.02
-            </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
             <li>
               <a href="/">로얄티 프리 이미지 자료</a>
-              <time datetime="2016-08-02T13:51:30">
-            2016.08.02
-           </time>
+              <time datetime="2016-08-02T13:51:30">2017.10.17</time>
             </li>
           </ul>
-
           <a href="#" class="pds-more" aria-labelledby="pds-tab">
             <img src="images/main/icon_more.gif" alt="더보기">
           </a>
@@ -318,8 +302,8 @@
       <h2 class="slogan-heading" aria-describedby="quotation">슬로건</h2>
       <p class="slogan-content" id="quotation">
         <q cite="http://w3.org/WAI/">The power of the Web is in its universality, 
-        Access by everyone regardless of disability is an essential aspect.
-      </q> Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+      Access by everyone regardless of disability is an essential aspect.
+    </q> Tim Berners - Lee , W3C Director and inventor of the World Wide Web
       </p>
     </div>
 
@@ -336,19 +320,11 @@
           <li><a href="#">site map</a></li>
         </ul>
         <address class="address">
-      <span>
-    서울시 강남구 역삼동 718-5번지 1302호
-      </span>
-      <span>
-    전화 : 02-3429-5114
-      </span>
-      <span>
-    FAX : 02-3429-5000
-      </span>
-      <span>
-    E-Mail : seulbinim@gmail.com
-      </span>
-    </address>
+    <span>서울시 강남구 역삼동 718-5번지 1302호</span>
+    <span>전화 : 02-3429-5114</span>
+    <span>FAX : 02-3429-5000</span>
+    <span>E-Mail : seulbinim@gmail.com</span>
+  </address>
         <div class="copyright">
           Copyright &copy; Web Cafe CORPORATION ALL RIGHTS RESERVED.
         </div>
